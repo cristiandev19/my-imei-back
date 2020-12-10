@@ -13,7 +13,7 @@ app
 .use(bodyParser.json({ limit: '5mb' }));
 
 
-const r_login   = require('./app/routes/login');
+const r_login   = require('./app/routes/r_login');
 // const r_auth    = require('./app/modules/auth/r_auth');
 // const r_profile = require('./app/modules/profile/r_profile');
 // const r_publication = require('./app/modules/publication/r_publication');
