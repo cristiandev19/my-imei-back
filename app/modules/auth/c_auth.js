@@ -9,6 +9,7 @@ const emailLogin = (req, res) => {
 };
 
 const emailSignUp = (req, res) => {
+  console.log('hola')
   console.log('req.body', req.body);
 
   return res.send({ hey: 'you' });
