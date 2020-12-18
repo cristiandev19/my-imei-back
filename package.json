@@ -1,0 +1,31 @@
+{
+  "name": "my-imei-back",
+  "version": "1.0.0",
+  "description": "App para guardar mi imei",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristiandev19/my-imei-back.git"
+  },
+  "keywords": [
+    "IMEI",
+    "express"
+  ],
+  "author": "Cristian Sotomayor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cristiandev19/my-imei-back/issues"
+  },
+  "homepage": "https://github.com/cristiandev19/my-imei-back#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
