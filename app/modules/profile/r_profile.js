@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const c_imei = require('./c_imei');
+const c_profile = require('./c_profile');
 
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
@@ -10,9 +10,6 @@ router.use(function timeLog(req, res, next) {
 });
 
 router
-  .get('/imeiByPersona', c_imei.imeiByPersona)
-  .put('/updateImei', c_imei.updateImei)
-  .delete('/deleteImei', c_imei.deleteImei)
-  .post('/addImei', c_imei.addImei);
+  .post('/updateProfileInfo', c_profile.updateProfileInfo);
 
 module.exports = router;

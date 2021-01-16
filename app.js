@@ -3,14 +3,18 @@ const express    = require('express'),
       app        = express(),
       cors       = require('cors'),
       bodyParser = require('body-parser'),
-      port       = 3001;
+      { dbConnection } = require('./app/database/config');
 
+
+require('dotenv').config();
+
+dbConnection();
 
 // Aqui pon la logica
 app
-.use(cors({ 'origin': '*' }))
-.use(bodyParser.urlencoded({ limit: '5mb', extended: true }))
-.use(bodyParser.json({ limit: '5mb' }));
+  .use(cors({ 'origin': '*' }))
+  .use(bodyParser.urlencoded({ limit: '5mb', extended: true }))
+  .use(bodyParser.json({ limit: '5mb' }));
 
 
 // const r_login   = require('./app/routes/r_login');
@@ -30,6 +34,6 @@ app.get('/', (req, res) => {
 res.send('Hello World!');
 });
 
-app.listen(port, () => {
-console.log(`Example app listening at http://localhost:${port}`);
+app.listen(process.env.PORT, () => {
+console.log(`Example app listening at http://localhost:${process.env.PORT}`);
 });
